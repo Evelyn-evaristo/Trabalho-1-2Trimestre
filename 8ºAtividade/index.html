@@ -1,0 +1,39 @@
+<!-- 
+Atividade 8: Crie uma função capaz de interpretar e calcular o resultado de uma expressão 
+aritmética simples representada por uma string contendo apenas números inteiros positivos e os 
+operadores de adição (+), subtração (-), multiplicação (*) e divisão (/). A função não pode utilizar o 
+método eval() e deve percorrer a string caractere por caractere para identificar números e 
+operadores, armazenando-os em estruturas apropriadas para posterior processamento. O cálculo 
+deve respeitar a precedência matemática tradicional, realizando primeiro as operações de 
+multiplicação e divisão e, somente depois, as operações de adição e subtração. Considere que a 
+divisão deve ser inteira, utilizando Math.floor() para descartar a parte decimal. A expressão pode 
+conter espaços em branco em qualquer posição e a implementação não pode utilizar expressões 
+regulares. Por exemplo, a expressão "8 / 2 + 3 * 2" deve resultar em 10, pois primeiro são realizadas 
+as operações de divisão e multiplicação, produzindo os valores 4 e 6, que posteriormente são 
+somados. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 8</title>
+</head>
+
+<body>
+
+    <h2>Calculadora de Expressões</h2>
+
+    <label>Digite uma expressão:</label>
+    <input type="text" id="expressao" placeholder="Ex: 8 / 2 + 3 * 2">
+
+    <button onclick="calcular()">Calcular</button>
+
+    <p id="saida"></p>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

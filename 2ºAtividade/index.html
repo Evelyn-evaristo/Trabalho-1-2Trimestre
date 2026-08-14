@@ -1,0 +1,92 @@
+<!--
+Atividade 2: Crie um programa que simule um pequeno caixa eletrônico. O usuário inicia com um 
+saldo de R$ 1000,00 e o sistema deve apresentar um menu contendo as opções de consultar saldo, 
+depositar, sacar e sair. Os saques só podem ser realizados em valores múltiplos de R$ 5,00 e não 
+podem ultrapassar o saldo disponível. Após cada operação, o programa deve exibir o saldo 
+atualizado. Além disso, o sistema deve limitar a quantidade de saques a cinco por execução do 
+programa, considerando que cada execução representa um dia. Após o terceiro saque, uma 
+mensagem de aviso deve informar ao usuário que restam poucos saques disponíveis. Ao encerrar a 
+execução, o programa deverá apresentar um resumo contendo a quantidade de depósitos realizados, 
+a quantidade de saques efetuados e o saldo final da conta. 
+
+? Precisamos:
+    - Menu;
+    - Saldo;
+    - Consultar saldo;
+    - Depositar;
+    - Sacar;
+    - Sair;
+
+? Requisitos:
+    - Saques apenas de valores múltiplos de 5;
+    - Não ultrapassar saldo disponível;
+    - Sempre listar o histórico;
+    - Mostrar saldo apos cada operação;
+    - Limite de saques 5;
+    - Após o terceiro saque aparece um aviso;
+    - Ao sair deverar mostrar o histórico de ações.
+
+? Irei utilizar:
+    - Lista:
+
+? Passos HTML:
+    -> Menu:
+        - Consultar saldo;
+        - Depositar;
+        - Sacar;
+        - Sair.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<body>
+    <header class="cabecalho"> <h1> Sua Conta Bancária ;)</h1></header>
+    <div class="botoes">
+
+        <!-- 1º Botão-->
+        <div class="consultarSaldo">
+        <button id="consultar" onclick="consultarSaldo()">
+            <h3>Consultar Saldo</h3>
+        </button>
+        </div>
+
+        <!-- 2º Botão-->
+        <div class="Deposito">
+            <button id="deposito" onclick="depositar()">
+                <h3>Depositar</h3>
+            </button>
+        </div>
+
+        <!-- 3º Botão -->
+        <div class="Sacar">
+            <button id="saque" onclick="sacar()">
+                <h3>Sacar</h3>
+            </button>
+        </div>
+
+        <!-- 4º Botão -->
+        <div class="sair">
+            <button id="sair" onclick="sair()">
+                <h3>Sair</h3>
+            </button>
+        </div>
+    </div>
+
+    <!-- Entrada para Deposito e Saque -->
+    <div class="entrada">
+        
+    </div>
+
+    <!-- Saida de todos os botões-->
+    <div class="saida">
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

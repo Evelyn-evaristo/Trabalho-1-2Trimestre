@@ -1,0 +1,91 @@
+<!--
+* # Atividade 1: 
+Um estacionamento cobra R$ 5,00 pela primeira hora, R$ 3,00 por cada hora adicional 
+até a 6ª hora e, a partir da 7ª hora, o valor por hora adicional passa a ser R$ 2,00. Desenvolva uma 
+função que receba a hora de entrada e a hora de saída, ambas no formato "HH", considerando que a 
+permanência ocorre em um único dia e não ultrapassa a meia-noite. O cálculo deve considerar que 
+qualquer fração de hora será cobrada como uma hora inteira, utilizando arredondamento para cima. 
+Caso o tempo total de permanência seja superior a 12 horas, aplique um desconto de 10% sobre o 
+valor bruto. A função deve retornar o valor final formatado com duas casas decimais.
+
+? Ação:
+R$ 5,00 = 1h
+R$ 3,00 <= 6h (limite 6h)
+> 7h = R$2,00 (acima de 7h)
+
+? A função vai receber: 
+Hora "HH":
+- Entrada 
+- Saida
+! OK!
+
+? Considere:
+Permanência ocorre em um único dia;
+Não ultrapassa a meia noite. 
+! OK!
+
+? Adicionais:
+Permanencia > 12h = desconto 10% sobre o valor bruto.
+
+? Variaveis:
+- Entrada;
+- Saida;
+- Valor final;
+- horas_adiconais;
+- preco_adicional;
+- primeira_hora
+
+? Sequencia:
+1. Registra entrada; 
+! OK!
+2. Conta o tempo;
+! OK!
+3. Registra a saida.
+! OK!
+
+? Acrescentando no código:
+* let formatado = valor.toFixed(2);
+* <input type="number" min="0" max="23" id="entrada" oninput="atualizarLimite()">
+* oninput
+* function
+* querySelector -> class no HTML
+
+? Código:
+*let; 
+*const;
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo">Calculo do estacionamento</h1>
+    </header>
+    <main class="corpo">
+        <div class="valores">
+            <div class="entrada">
+                <h2>ENTRADA:</h2>
+                <label for="entrada">Insira o horario de entrada "HH":</label>
+                <input type="number" min="0" max="23" id="entrada" oninput="atualizarLimite()">
+                
+                <h2>SAIDA:</h2>
+                <label for="saida">Insira o horario de saida "HH":</label>
+                <input type="number" min="0" max="23" id="saida" oninput="atualizarLimite()">
+            </div>
+            <button onclick="calcularEstacionamento()">
+                Calcular
+            </button>
+        </div>
+
+        <P class="resultado"></P>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
